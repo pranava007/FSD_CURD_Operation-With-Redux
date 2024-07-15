@@ -20,7 +20,7 @@ const Users = () => {
 
     const fetchData = async()=>{
         try {
-            const response = await axios.get("http://localhost:5000/api/get-user")
+            const response = await axios.get("https://fsd-curd-operation-backent.onrender.com/api/get-user")
             dispatch(getUser(response.data.result))
             
         } catch (error) {
@@ -30,7 +30,7 @@ const Users = () => {
  
     const handledelete = async(id)=>{
       try {
-        const respons = await axios.delete(`http://localhost:5000/api/del-user/${id}`)
+        const respons = await axios.delete(`https://fsd-curd-operation-backent.onrender.com/api/del-user/${id}`)
         dispatch(deleteUser({id}))
         
       } catch (error) {

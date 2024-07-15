@@ -28,7 +28,7 @@ const UpdateUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.put(`http://localhost:5000/api/Update-user/${id}`, { name, email, age })
+      const response = await axios.put(`https://fsd-curd-operation-backent.onrender.com/api/Update-user/${id}`, { name, email, age })
       dispatch(updateUser(response.data.result))
       navigate("/")
     } catch (error) {

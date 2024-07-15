@@ -19,7 +19,7 @@ const CreateUser = () => {
         e.preventDefault()
         try {
 
-            const response = await axios.post("http://localhost:5000/api/create-user",{name,email,age})
+            const response = await axios.post("https://fsd-curd-operation-backent.onrender.com/api/create-user",{name,email,age})
             dispath(createUser(response.data.result))
             navigate("/")
 
